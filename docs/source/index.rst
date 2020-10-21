@@ -10,7 +10,7 @@ This package has been developed for use with `Sage <https://www.sagemath.org/>`_
 manifolds
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :titlesonly:
 
    chart/index

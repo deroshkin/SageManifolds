@@ -168,7 +168,7 @@ class HermMetric(Tensor):
     def __init__(self, chart: CplxChart, vals: list = None):
         """
         :param chart: Chart to which this tensor belongs, must be a CplxChart
-        :param vals: Values as coefficients of dz^a (x) d\bar{z}^b, optional, defaults to \sum_a dz^a (x) d\bar{z}^a
+        :param vals: Values as coefficients of dz^a (x) d\bar{z}^b, optional, defaults to \\sum_a dz^a (x) d\bar{z}^a
             becomes self.h_vals
 
         Create a Hermitian Metric object

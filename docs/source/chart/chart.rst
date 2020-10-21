@@ -16,13 +16,7 @@
     # Create M as a 3-dimensional coordinate chart with coordinates [x, y, z]
     M = Chart(3, [x, y, z])
     #Compute the Lie bracket of the vector fields (x^2, z, 0) and (y, x, z)
-    M.bracket([x^2, z, 0], [y, x, z])
-
-:Output:
-
-.. code-block:: python
-
-    [-2*x*y + z, x^2 - z, 0]
+    M.bracket([x^2, z, 0], [y, x, z]) # Output: [-2*x*y + z, x^2 - z, 0]
 
 In the above we created a 3-dimensional chart with coordinates `x`, `y`, `z` and then asked the computer to calculate
 

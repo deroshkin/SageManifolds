@@ -61,7 +61,7 @@ exclude_patterns = []
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-sys.path.insert(0, os.path.abspath('../../..'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 #html_css_files = ['css/theme.css']
 #html_js_files = ['js/fa.js', 'js/modernizr.js']

@@ -4,7 +4,7 @@ Chart Object Reference
 This document contains the references for the various ``Chart`` objects
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     chart
     riemchart
