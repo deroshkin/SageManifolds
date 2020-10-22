@@ -3,9 +3,9 @@ from typing import Tuple, Union, List
 
 from sage.all import var, diff, Matrix, Rational, I, Expression
 
-from .Riemannian import RiemChart
-from .Base import Chart
-from .Tensor import Tensor, Form
+from .riemannian import RiemChart
+from .base import Chart
+from .tensor import Tensor, Form
 
 
 class CplxChart(Chart):

@@ -1,6 +1,6 @@
 from sage.all import diff, Matrix, Expression
 
-from .Riemannian import GenChart
+from .riemannian import GenChart
 
 
 class DensChart(GenChart):

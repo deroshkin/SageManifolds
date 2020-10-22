@@ -2,7 +2,7 @@ from typing import Tuple
 
 from sage.all import Matrix, diff, Rational, var, function, Expression
 
-from .Base import Chart
+from .base import Chart
 
 
 class RiemChart(Chart):
@@ -123,7 +123,7 @@ class RiemChart(Chart):
         self._R - list version self.r[i][j][k][l] = R_{ijk}^l
         self._R_T - Tensor version
         """
-        from .Tensor import Tensor
+        from .tensor import Tensor
 
         self._R = [[[[sum([self.cs[j][k][l] * self.cs[i][l][s] - self.cs[i][k][l] * self.cs[j][l][s]
                            for l in range(self.dim)]) + diff(self.cs[j][k][s], self.coords[i])
@@ -356,7 +356,7 @@ class GenChart(RiemChart):
         self.mr - list version self.mr[i][j][k][l] = MR_{ijk}^l
         self.mr_t - Tensor version
         """
-        from .Tensor import Tensor
+        from .tensor import Tensor
 
         self._mr = [[[[sum([self.mcs[j][k][l] * self.mcs[i][l][s] - self.mcs[i][k][l] * self.mcs[j][l][s]
                             for l in range(self.dim)]) + diff(self.mcs[j][k][s], self.coords[i])

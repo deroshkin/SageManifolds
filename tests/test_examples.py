@@ -1,9 +1,10 @@
-import os, sys
-
-sys.path.insert(0, os.path.abspath('..'))
-from manifolds.Examples import hyperbolic_half_space
+import os
+import sys
 import unittest
 from sage.all import Matrix, var, cos, sin, sqrt
+
+sys.path.insert(0, os.path.abspath('..'))
+from manifolds.examples import hyperbolic_half_space, sphere_conformal, sphere_polar, complex_projective_space
 
 
 class H3Tests(unittest.TestCase):
@@ -28,5 +29,5 @@ class H3Tests(unittest.TestCase):
                                                   5 * cos(t) * sin(t)]), [0, 0, 0])
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()

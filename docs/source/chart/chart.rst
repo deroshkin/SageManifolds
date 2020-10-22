@@ -2,7 +2,7 @@
 ``Chart`` -- A basic coordinate chart
 ======================================
 
-.. autoclass:: manifolds.Base.Chart
+.. autoclass:: manifolds.base.Chart
     :members: __init__, bracket
 
 -----

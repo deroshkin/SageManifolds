@@ -1,5 +1,5 @@
 ``DensChart`` class
 ========================
 
-.. autoclass:: manifolds.Density.DensChart
+.. autoclass:: manifolds.density.DensChart
     :members: __init__

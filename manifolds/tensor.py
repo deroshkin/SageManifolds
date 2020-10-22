@@ -4,8 +4,8 @@ import itertools
 
 from sage.all import diff, Matrix, factorial, det, sqrt, prod, Expression
 
-from .Riemannian import RiemChart, GenChart
-from .Base import Chart
+from .riemannian import RiemChart, GenChart
+from .base import Chart
 
 
 def sign(l):

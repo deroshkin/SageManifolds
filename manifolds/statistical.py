@@ -1,7 +1,7 @@
 from sage.all import Rational, Matrix
 
-from .Tensor import Tensor
-from .Riemannian import GenChart
+from .tensor import Tensor
+from .riemannian import GenChart
 
 
 class StatChart(GenChart):
