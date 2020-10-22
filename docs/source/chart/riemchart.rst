@@ -5,7 +5,7 @@
 .. toctree::
     :maxdepth: 1
 
-.. autoclass:: Manifolds.Riemannian.RiemChart
+.. autoclass:: manifolds.Riemannian.RiemChart
     :members: __init__, inner, connection, curv, sec, ricci, path_derivative, parallel_transport
 
 =============

@@ -15,8 +15,8 @@ type specific methods.
 
 Additionally, this library provides 3 special methods:
 
-.. autofunction:: Manifolds.Tensor.df
+.. autofunction:: manifolds.Tensor.df
 
-.. autofunction:: Manifolds.Tensor.laplace
+.. autofunction:: manifolds.Tensor.laplace
 
-.. autofunction:: Manifolds.Tensor.hessian
+.. autofunction:: manifolds.Tensor.hessian

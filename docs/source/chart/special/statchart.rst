@@ -1,5 +1,5 @@
 ``StatChart`` class
 ========================
 
-.. autoclass:: Manifolds.Statistical.StatChart
+.. autoclass:: manifolds.Statistical.StatChart
     :members: __init__

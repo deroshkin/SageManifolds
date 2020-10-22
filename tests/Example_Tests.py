@@ -1,7 +1,7 @@
 import os, sys
 
 sys.path.insert(0, os.path.abspath('..'))
-from Manifolds.Examples import hyperbolic_half_space
+from manifolds.Examples import hyperbolic_half_space
 import unittest
 from sage.all import Matrix, var, cos, sin, sqrt
 

@@ -1,5 +1,5 @@
 ``CplxChart`` -- Base chart for complex manifolds
 =====================================================
 
-.. autoclass:: Manifolds.Complex.CplxChart
+.. autoclass:: manifolds.Complex.CplxChart
     :members: __init__
