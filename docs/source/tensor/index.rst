@@ -17,6 +17,6 @@ Additionally, this library provides 3 special methods:
 
 .. autofunction:: manifolds.tensor.df
 
-.. autofunction:: manifolds.tensor.laplace
+.. autofunction:: manifolds.tensor.laplacian
 
 .. autofunction:: manifolds.tensor.hessian

@@ -725,7 +725,7 @@ class Form:
         elif self.n == 1:
             return Form(self.chart, 0, {frozenset({}): -self.to_tensor().diff().raise_ind(0).iotrace()})
 
-    def hodge_laplace(self) -> Form:
+    def hodge_laplacian(self) -> Form:
         """
         :return: Hodge Laplacian of the form
         :raises TypeError: when the form has size larger than the dimension of the chart
@@ -759,7 +759,7 @@ def df(f: Expression, chart: Chart) -> Form:
     return Form(chart, 1, {frozenset({k}): diff(f, chart.coords[k]) for k in range(chart.dim)})
 
 
-def laplace(f: Union[Expression, Tensor, Form], chart: Chart = None) -> Union[Expression, Tensor, Form]:
+def laplacian(f: Union[Expression, Tensor, Form], chart: Chart = None) -> Union[Expression, Tensor, Form]:
     """
     :param f: a function, tensor, or form
     :param chart: chart, optional if f in a tensor or form, required if f is a function
