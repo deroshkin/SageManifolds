@@ -1,4 +1,4 @@
-from __future__ import annotations # Should become unnecessary in Python 3.10
+from __future__ import annotations  # Should become unnecessary in Python 3.10
 from typing import Union
 import itertools
 
@@ -44,7 +44,7 @@ class Tensor:
 
     """
 
-    def __init__(self, chart: Chart, n_in: int, n_out: int, vals: list=None):
+    def __init__(self, chart: Chart, n_in: int, n_out: int, vals: list = None):
         """
         :param chart: The manifold coordinate chart to which this tensor belongs
         :param n_in: Number of input vectors
@@ -302,7 +302,7 @@ class Tensor:
         d = self.diff()
         return d.is_input_symmetric()
 
-    def iotrace(self, i: int=0, o: int=0) -> Union[Tensor, Expression]:
+    def iotrace(self, i: int = 0, o: int = 0) -> Union[Tensor, Expression]:
         """
         :param i: Input index to be traced
         :param o: Output index to be trace
@@ -383,7 +383,7 @@ class Form:
         &\\text{self.vals}[\\text{frozenset}(I)] = f_I
     """
 
-    def __init__(self, chart: Chart, n: int, vals: dict=None):
+    def __init__(self, chart: Chart, n: int, vals: dict = None):
         """
         :param chart: Manifold chart on which this form lives
         :param n: The order of the chart
@@ -643,7 +643,7 @@ class Form:
                 ip += self.vals[ind1] * other.vals[ind2] * det(m)
         return ip
 
-    def hodge_star(self, vol: Expression=None) -> Form:
+    def hodge_star(self, vol: Expression = None) -> Form:
         """
         :param vol: The volume form coefficient , optional if not provided, uses the default Riemannian volume form
         :type vol: Expression
@@ -738,11 +738,12 @@ class Form:
         if self.n > self.chart.dim:
             raise TypeError("Can't do Hodge Laplacian of a form of size larger than the dimension of the chart")
         elif self.n == self.chart.dim:
-            return self.diff().codiff()
-        elif self.n == 0:
             return self.codiff().diff()
+        elif self.n == 0:
+            return self.diff().codiff()
         else:
             return self.codiff().diff() + self.diff().codiff()
+
 
 def df(f: Expression, chart: Chart) -> Form:
     """
@@ -758,7 +759,7 @@ def df(f: Expression, chart: Chart) -> Form:
     return Form(chart, 1, {frozenset({k}): diff(f, chart.coords[k]) for k in range(chart.dim)})
 
 
-def laplace(f: Union[Expression, Tensor, Form], chart: Chart=None) -> Union[Expression, Tensor, Form]:
+def laplace(f: Union[Expression, Tensor, Form], chart: Chart = None) -> Union[Expression, Tensor, Form]:
     """
     :param f: a function, tensor, or form
     :param chart: chart, optional if f in a tensor or form, required if f is a function
@@ -779,7 +780,7 @@ def laplace(f: Union[Expression, Tensor, Form], chart: Chart=None) -> Union[Expr
     elif not chart:
         raise NotImplementedError("Can't compute laplace of a function without a chart")
     else:
-        return df(f, chart).to_tensor().diff().iotrace()
+        return df(f, chart).to_tensor().diff().raise_ind(0).iotrace(0, 0)
 
 
 def hessian(f: Expression, chart: Chart) -> Tensor:
