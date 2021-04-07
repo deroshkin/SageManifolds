@@ -766,7 +766,7 @@ def laplacian(f: Union[Expression, Tensor, Form], chart: Chart = None) -> Union[
     :return: the Laplacian of f
     :raises NotImplementedError: when trying to compute the Laplacian of a function without specifying a chart.
 
-    Compute the laplace of f, a function, tensor, or form
+    Compute the laplacian of f, a function, tensor, or form
     """
 
     if isinstance(f, Tensor):
