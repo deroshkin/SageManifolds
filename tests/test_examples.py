@@ -5,7 +5,8 @@ from random import random
 from sage.all import Matrix, var, cos, sin, sqrt, arctan, pi
 
 sys.path.insert(0, os.path.abspath('..'))
-from manifolds.examples import hyperbolic_half_space, sphere_conformal, sphere_polar, complex_projective_space
+from manifolds.examples import hyperbolic_half_space, sphere_conformal, sphere_polar
+from manifolds.examples import complex_projective_space
 
 
 def rnd(a=None, b=None):

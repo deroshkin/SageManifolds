@@ -12,3 +12,5 @@ the example, and optionally a list of variables.
 .. autofunction:: manifolds.examples.complex_projective_space
 
 .. autofunction:: manifolds.examples.hyperbolic_half_space
+
+.. autofunction:: manifold.examples.discrete_stat_manifold
